@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.rawen.users.entities.Role;
 import com.rawen.users.entities.User;
+import com.rawen.users.service.register.RegistrationRequest;
 
 public interface UserService {
 	User saveUser(User user);
@@ -11,6 +12,10 @@ public interface UserService {
 	Role addRole(Role role);
 	User addRoleToUser(String username, String rolename);
 	List<User> findAllUsers();
+	User registerUser(RegistrationRequest request);
+	public void sendEmailUser(User u, String code) ;
+
 	}
+
 
 
